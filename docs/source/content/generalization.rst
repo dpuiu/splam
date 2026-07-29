@@ -19,7 +19,7 @@ Below is a simple example to show :ref:`Splam works on mouse <example-of-running
 Example: Running Splam on house mouse (*Mus musculus*) 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In this example, we will be scoring the full GRCm39 assembly of mouse chromosome 19. The steps are basically the same as the :ref:`human example <annotation-detailed-section>`, which you should check out first. For brevity, we only summarize the main code here, and detailed explanations about the outputs and arguments of each step can be found in :ref:``
+In this example, we will be scoring the full GRCm39 assembly of mouse chromosome 19. The steps are basically the same as the :ref:`human example <annotation-detailed-section>`, which you should check out first. For brevity, we only summarize the main code here; detailed explanations about each step are available in the human example.
 
 |
 
@@ -28,21 +28,14 @@ In this example, we will be scoring the full GRCm39 assembly of mouse chromosome
 Step 1: Preparing your input files
 ------------------------------------
 
-For non-human species, you need four files for running Splam. It is very similar to the :ref:`human analysis workflow <annotation-prepare-input>`, with the key difference being an additional file which tells Splam the length of each chromosome. This information helps Splam handle introns that are at the ends of the chromosome. Splam comes with this information for humans, but not for other species.
+For non-human species, you need the same three inputs used in the :ref:`human analysis workflow <annotation-prepare-input>`: an annotation, its matching reference genome, and the Splam model.
 
 .. admonition:: Input files
    :class: note
 
-   1. An annotation file in :code:`GFF` or :code:`GTF` format [`example file: mouse_chr19.gff <https://github.com/Kuanhao-Chao/splam/blob/main/test/mouse_chr19.gff>`_].  
+   1. An annotation file in :code:`GFF` or :code:`GTF` format [`example file: mouse_chr19_subset.gff <https://github.com/Kuanhao-Chao/splam/blob/main/test/mouse_chr19_subset.gff>`_].
    2. A reference genome in :code:`FASTA` format [`example file: mouse_chr19.fa <https://github.com/Kuanhao-Chao/splam/blob/main/test/mouse_chr19.fa>`_].
    3. The Splam model, which you can find here: `splam.pt <https://github.com/Kuanhao-Chao/splam/blob/main/model/splam_script.pt>`_
-   4. An assembly report in :code:`tsv` format [`example file: GRCm39_assembly_report.txt <https://github.com/Kuanhao-Chao/splam/blob/main/test/GRCm39_assembly_report.txt>`_].
-
-
-.. admonition:: Assembly report
-   :class: important
-
-   For non-human species, remember to include an assembly report with your input files! It is advised to download the assembly report from the `NCBI FTP site <https://ftp.ncbi.nlm.nih.gov/>`, along with your :code:`GFF` or :code:`GTF` annotation file and :code:`FASTA` genome. 
 
 |
 
@@ -67,17 +60,11 @@ This gives you a :code:`BED` file with the extracted introns in :code:`tmp_out_g
 Step 3: Scoring extracted introns
 -----------------------------------
 
-In this step, the goal is to score all the extracted splice junctions. To accomplish this, you will need 4 essential files. **(1)** The BED file that was generated in :ref:`Step 2 <mouse-extract-introns>`, **(2)** :ref:`the reference genome (2) <mouse-prepare-input>` which shares coordinates with the junction BED file, **(3)** :ref:`the Splam model (3) <mouse-prepare-input>`, and **(4)** :ref:`a tsv file (4)<mouse-prepare-input>` telling Splam the length of each chromosome. Once you have these files in place, you can run the following command:
+In this step, the goal is to score all the extracted splice junctions. You will need three files: **(1)** the BED file generated in :ref:`Step 2 <mouse-extract-introns>`, **(2)** :ref:`the matching reference genome <mouse-prepare-input>`, and **(3)** :ref:`the Splam model <mouse-prepare-input>`. Once these files are in place, run:
 
 .. code-block:: bash
 
-   splam score -A GRCm39_assembly_report.txt -G mouse_chr19.fa -m ../model/splam_script.pt -o tmp_out_generalization tmp_out_generalization/junction.bed
-
-
-.. admonition:: -A flag
-   :class: note
-
-   Note that for non-human species, you need to run this step with the additional :code:`-A` flag to include the assembly report.
+   splam score -G mouse_chr19.fa -m ../model/splam_script.pt -o tmp_out_generalization tmp_out_generalization/junction.bed
 
 
 This gives you a :code:`BED` file with the scored introns in :code:`tmp_out_generalization/junction_score.bed`.

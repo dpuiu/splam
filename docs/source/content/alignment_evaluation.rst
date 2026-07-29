@@ -107,47 +107,45 @@ By default, Splam processes alignments without pairing and bundling them. If you
 
     .. dropdown:: :code:`-P / --paired`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         This argument bundles and pairs alignment reads. If your sample is paired-end RNA-Seq, you should run Splam with this argument to ensure more accurate flag updates.
 
     .. dropdown:: :code:`-n / --write-junctions-only`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
         
         If you only want to extract splice junctions from the BAM file without running the subsequent cleaning step, you can use the :code:`-n / --write-junctions-only` argument to skip writing out temporary files. This argument makes splice junction extraction faster!
 
     .. dropdown:: :code:`-M / --max-splice DIST`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         The maximum length for splice junctions is 100,000nt by default. This means that any splice junctions in spliced alignments longer than the maximum splice junction length will be removed.
 
 
     .. dropdown:: :code:`-g / --bundle-gap GAP`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         If you are running with a single-end RNA-Seq sample, then you do not need to worry about the :code:`-g / --bundle-gap GAP` argument. However, if you are working with a paired-end RNA-Seq sample and using the :code:`-P / --paired` argument, then this parameter becomes significant. The algorithm for extracting splice junctions in paired-end RNA-Seq data begins by bundling alignments. As alignments overlap, the bundle extends accordingly. Regions with no alignment coverage are referred to as "gaps." This argument allows you to define the minimum gap size allowed within a bundle. In other words, if a gap's length exceeds the specified minimum, the regions on the left and right-hand side of the gap are treated as two separate bundles. The default value for this argument is set to 1000nt, but you can adjust it based on your specific analysis needs.
 
 
     .. dropdown:: :code:`-o / --outdir DIR`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         The directory where the output file is written to. The default output directory is :code:`tmp_out`. You can set your own output directory using this argument.
 
     .. dropdown:: :code:`-f / --file-format FILE_FORMAT`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
-        Splam automatically detects whether your input file is a BAM or GFF file based on its extension. In this section, we are using Splam to clean up a given alignment file, so please ensure that your input file has a :code:`.bam` or :code:`.BAM` extension.
+        Splam normally detects :code:`BAM` from the input extension. Use this option to specify the format explicitly.
+
+    .. dropdown:: :code:`--fr`
+        :animate: fade-in-slide-down
+
+        Treat the input as an :code:`fr-secondstrand` stranded library. This option cannot be combined with :code:`--rf`.
+
+    .. dropdown:: :code:`--rf`
+        :animate: fade-in-slide-down
+
+        Treat the input as an :code:`rf-firststrand` stranded library. This option cannot be combined with :code:`--fr`.
 
 |
 
@@ -180,15 +178,11 @@ After this step, a new :code:`BED` file is produced, featuring eight columns. Tw
 
     .. dropdown:: :code:`-G / --reference-genome REF.fasta`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         The path to the reference genome in FASTA format. Please ensure that this file shares the same coordinates as your input alignment file, which is where you align your RNA-Seq reads. Splam will handle the indexing process for you if the reference genome has not been indexed yet.
 
     .. dropdown:: :code:`-m / --model MODEL.pt`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         This argument is the path to the trained Splam model. If you haven't downloaded the Splam model yet, here is the :ref:`link <alignment-prepare-input>`.
 
@@ -196,32 +190,19 @@ After this step, a new :code:`BED` file is produced, featuring eight columns. Tw
 .. admonition::  Here are some **optional arguments**:
     :class: note
 
-    .. dropdown:: :code:`-A / --assembly-report REPORT`
-        :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
-
-        The path to an assembly report file in :code:`tsv` format which contains the chromosome identifiers and lengths. This information is built into Splam if running on a human genome (defaults to human GRCh38, patch 14). However, **this argument is required if running on non-human species**. See :ref:`our mouse example <example-of-running-splam-on-mouse>` for reference. 
-
     .. dropdown:: :code:`-d / --device pytorch_DEV`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         By default, Splam automatically detects your environment and runs in :code:`cuda` mode if CUDA is available. However, if your computer is running macOS, Splam will check if :code:`mps` mode is available. If neither :code:`cuda` nor :code:`mps` are available, Splam will run in :code:`cpu` mode. You can explicitly specify the mode using the :code:`-d / --device` argument.
 
 
     .. dropdown:: :code:`-b / --batch-size BATCH`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         Additionally, you can adjust the batch size using the :code:`-b / --batch-size` argument. This argument defines the number of samples that will be propagated through the Splam network. By default, the batch size is set to 10. We recommend setting a small batch size (for instance 2) when running Splam in :code:`cpu` mode.
 
     .. dropdown:: :code:`-o / --outdir DIR`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         The directory where the output file is written to. The default output directory is :code:`tmp_out`. This argument is same as the one in :ref:`Step 2 <alignment-extract-introns>`. Note that if you set your own output directory, you have to set the same output directory for this step as well. Otherwise, Splam will not be able to find some essential temporary files. We recommend users not to set this argument and use the default value.
 
@@ -253,29 +234,21 @@ The output file of this step is a sorted Splam-cleaned BAM file. You can replace
 
     .. dropdown:: :code:`-P / --paired`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
         
         This argument bundles and pairs alignment reads. If your sample is paired-end RNA-Seq, you should run Splam with this argument to ensure more accurate flag updates. Note that you should be consistent in setting this argument as described in :ref:`Step 2 <alignment-extract-introns>`.
 
     .. dropdown:: :code:`-t / --threshold threshold`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         This is the score cutoff threshold for Splam to determine whether a given splice junction is spurious (discarded) or not. It is a floating-point value between 0 and 1. If the score of either the donor or acceptor site falls below this value, then any spliced alignments containing this junction will be removed. The default threshold is set to 0.1.
 
     .. dropdown:: :code:`-@ / --threads threads`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         Splam utilizes the sorting, compression, and merging scripts from `samtools <https://github.com/samtools/samtools>`_. You can enable multi-threading for the final stage of BAM file sorting and merging by setting this argument. The more threads, the more efficient the operation, but also the more resource overhead. By default, the operation is performed in single-thread.
 
     .. dropdown:: :code:`-o / --outdir DIR`
         :animate: fade-in-slide-down
-        :title: bg-light font-weight-bolder
-        :body: bg-light text-left
 
         The directory where the output file is written to. The default output directory is :code:`tmp_out`. This argument is same as the one in :ref:`Step 2 <alignment-extract-introns>` and :ref:`Step 3 <alignment-score-extracted-introns>`. Note that if you set your own output directory, you have to set the same output directory for this step as well, or otherwise, Splam will not be able to find some essential temporary files. We recommend users not to set this argument and use the default value.
 

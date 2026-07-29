@@ -33,7 +33,7 @@ There are three ways that you can install Splam:
 Install through pip
 -------------------------
 
-Splam is on `PyPi 3.12 <https://pypi.org/project/splam/>`_ now. Check out all the releases `here <https://pypi.org/manage/project/splam/releases/>`_. Pip automatically resolves and installs any dependencies required by Splam.
+Splam is available on `PyPI <https://pypi.org/project/splam/>`_, where all published releases are listed. Pip automatically resolves and installs any dependencies required by Splam.
 
 .. code-block:: bash
    
@@ -88,8 +88,6 @@ Run the following command to make sure Splam is properly installed:
 
 .. dropdown:: Terminal output
     :animate: fade-in-slide-down
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     .. code-block::
 
@@ -126,7 +124,7 @@ Run the following command to make sure Splam is properly installed:
 
 Now, you are ready to go !
 --------------------------
-Please continue to the :ref:`Quick Start Guide`.
+Please continue to the :ref:`Quick Start Guide <quick-start>`.
 
 
 

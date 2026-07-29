@@ -10,9 +10,6 @@ Q & A ...
 
 .. dropdown:: Q: What is Splam?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-dark font-weight-bolder howtoclass
-    :body: bg-dark text-left
 
     Splam stands for two things: **(1)** Splam refers to the deep grouped residual CNN model that we designed to accurately predict splice junctions (based solely on an input DNA sequence), and **(2)** it also stands for this software which can clean up alignment files and evaluate annotation files.
 
@@ -24,9 +21,6 @@ Q & A ...
 
 .. dropdown:: Q: Why do we need Splam?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     We are concerned about the method of training splice junction predictors by relying on splice junctions in solely canonical transcripts. Designing a splice site recognition method based only on one isoform per gene may result in mislabeling alternative splice sites even when they are perfectly valid. Therefore, 
 
@@ -52,9 +46,6 @@ Q & A ...
 
 .. dropdown:: Q: What makes Splam different from SpliceAI?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
 
     Splam and SpliceAI are both frameworks used for predicting splice junctions in DNA sequences, but they have some key differences.
@@ -81,9 +72,6 @@ Q & A ...
 
 .. .. dropdown:: Q: Why does Splam tak 800bp for training?
 ..     :animate: fade-in-slide-down
-..     :container: + shadow
-..     :title: bg-light font-weight-bolder
-..     :body: bg-light text-left
 
 ..     Splam's choice of 800bp (base pairs) for training input sequences is grounded in model albation experimentat aimed at optimizing the model's ability to accurately identify splice sites. In the development phase, we explored a range of input sequence lengths—from 40bp up to 800bp—to evaluate how the amount of information impacts the model's performance. Our tests included training different versions of the Splam model, each tailored to the specific sequence lengths (e.g., Splam-40, Splam-100, through to Splam-800).
 
@@ -105,9 +93,6 @@ Q & A ...
 
 .. dropdown:: Q: What is the model architecture of Splam? 
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     Check out the :ref:`model architecture section <model-architecture>`.
 
@@ -115,9 +100,6 @@ Q & A ...
 
 .. dropdown:: Q: For Splam  model design, why do we use five residual groups?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     In the design of the Splam model, the inclusion of five residual groups is a result of the experiment to determine the optimal structure for splice site identification. This architectural choice was informed by an ablation study that varied the number of residual groups within the model, aiming to balance complexity with performance efficacy. 
     
@@ -136,9 +118,6 @@ Q & A ...
 
 .. dropdown:: Q: What is the difference between two released model, :code:`splam.pt` and :code:`splam_script.pt`?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     You may have noticed that we have two released Splam models: ":code:`splam.pt`" and ":code:`splam_script.pt`".
 
@@ -159,9 +138,6 @@ Q & A ...
 
 .. dropdown:: Q: Which mode should I run Splam, :code:`cpu`, :code:`cuda`, or :code:`mps`?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
 
     By default, Splam automatically detects your environment and runs in :code:`cuda` mode if CUDA is available. However, if your computer is running macOS, Splam will check if :code:`mps` mode is available. If neither :code:`cuda` nor :code:`mps` are available, Splam will run in :code:`cpu` mode. You can explicitly specify the mode using the :code:`-d / --device` argument.
@@ -176,10 +152,10 @@ Q & A ...
         2. If you are using Linux with CUDA installed, you should run Splam with :code:`cuda` mode.
 
 
-        3. If you are none of the above cases, then you can still run Splam with :code:`cpu`` mode.
+        3. If you are none of the above cases, then you can still run Splam with :code:`cpu` mode.
 
 
-    You can check out the `Pytorch website <https://pytorch.org/docs/stable/tensor_attributes.html#torch.device>`_ for more explanation about the :code:`device` parameter.
+    You can check out the `PyTorch documentation <https://docs.pytorch.org/docs/stable/tensor_attributes.html>`_ for more explanation about the :code:`device` parameter.
 
 
 | 
@@ -189,9 +165,6 @@ Q & A ...
 
 .. dropdown:: Q: How do I interpret Splam scores?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     Given an input of length 800nt, Splam outputs a Tensor with dimensions (3 x 800). The first channel represents the "acceptor scores", the second channel represents the "donor scores", and the third channel represents the "non-splice site scores". Each score is between 0 and 1, representing Splam's confidence in a given site being a splice site. A score closer to one indicates a higher level of confidence in its classification.
 
@@ -202,9 +175,6 @@ Q & A ...
 
 .. .. dropdown:: Q: What is canonical transcripts? 
 ..     :animate: fade-in-slide-down
-..     :container: + shadow
-..     :title: bg-light font-weight-bolder
-..     :body: bg-light text-left
 
 
 .. |
@@ -214,9 +184,6 @@ Q & A ...
 
 .. .. dropdown:: Q: What is alternative splicing?
 ..     :animate: fade-in-slide-down
-..     :container: + shadow
-..     :title: bg-light font-weight-bolder
-..     :body: bg-light text-left
 
 
 .. Q: What is the model architecture of Splam?
@@ -228,9 +195,6 @@ Q & A ...
 
 .. dropdown:: Q: How is Splam trained?
     :animate: fade-in-slide-down
-    :container: + shadow
-    :title: bg-light font-weight-bolder
-    :body: bg-light text-left
 
     Check out the :ref:`splam training and testing section <splam-train-test>`.
 

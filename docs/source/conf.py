@@ -32,13 +32,10 @@ copyright = u'Copyright (c) 2023 Kuan-Hao Chao. All rights reserved.'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark',
-              'sphinx_rtd_theme',
-              'sphinx.ext.autosectionlabel',
-              'sphinx_toolbox.collapse',
-              'sphinx_panels',
-              'sphinxcontrib.bibtex',
-              ]
+extensions = [
+    "sphinx_design",
+    "sphinxcontrib.bibtex",
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -48,7 +45,7 @@ templates_path = ['_templates']
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'English'
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -70,15 +67,14 @@ html_theme = 'furo'
 # html_theme = 'scrolls'
 
 
-html_logo = "./_static/logo.png"
+html_logo = "_static/logo.png"
+html_favicon = "_static/logo.png"
 html_theme_options = {
     "announcement": "Splam: a deep-learning-based splice site predictor that improves spliced alignments",
     "sidebar_hide_name": True,
-    "source_repository": "https://github.com/Kuanhao-Chao/splam",
+    "source_repository": "https://github.com/Kuanhao-Chao/splam/",
     "source_branch": "main",
-    "source_directory": "docs/",
-
-    "prefers-color-scheme": "light",
+    "source_directory": "docs/source/",
 
     # "footer_start": ["test.html"],
     # "footer_end": ["test.html"],
@@ -128,10 +124,6 @@ html_sidebars = {
         "sidebar/scroll-end.html",
         "sidebar/sidebarlogo.html",
     ]
-}
-
-html_context = {
-   "default_mode": "light"
 }
 
 numfig = True

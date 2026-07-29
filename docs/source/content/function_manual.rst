@@ -29,7 +29,9 @@ splam extract
 
 .. code-block:: text
 
-   usage: splam extract [-h] [-V] [-P] [-n] [-f FILE_FORMAT] [-o DIR] [-M DIST] [-g GAP] INPUT
+   usage: splam extract [-h] [-V] [-F TYPES] [-P] [-n] [-f FILE_FORMAT]
+                        [-d DATABASE] [-o DIR] [-M DIST] [-g GAP] [--fr] [--rf]
+                        INPUT
 
    positional arguments:
    INPUT                 target alignment file in BAM format or annotation file in GFF format.
@@ -37,16 +39,22 @@ splam extract
    optional arguments:
    -h, --help            show this help message and exit
    -V, --verbose         running splam in verbose mode.
+   -F TYPES, --features TYPES
+                           text file listing parent feature types from which to extract introns
    -P, --paired          bundling alignments in "paired-end" mode.
    -n, --write-junctions-only
-                           writing out splice junction bed file only without other temporary files.
+                           writing out splice junction BED file only without other temporary files.
    -f FILE_FORMAT, --file-format FILE_FORMAT
-                           the file type for SPLAM to process. It can only be "BAM", "GFF", or "GTF". The default value is "BAM".
-   -o DIR, --outdir DIR  the directory where the output file is written to. Default output filename is "junction_score.bed"
+                           the file type for Splam to process: "BAM", "GFF", or "GTF"
+   -d DATABASE, --database DATABASE
+                           path to an existing gffutils annotation database
+   -o DIR, --outdir DIR  output directory; the default is "tmp_out"
    -M DIST, --max-splice DIST
                            maximum splice junction length
    -g GAP, --bundle-gap GAP
                            minimum gap between bundles
+   --fr                    assume a stranded fr-secondstrand library
+   --rf                    assume a stranded rf-firststrand library
 
 |
 
@@ -68,11 +76,11 @@ splam score
                            the number of samples that will be propagated through the network. By default, the batch size is set to 10.
    -d pytorch_dev, --device pytorch_dev
                            the computing device that is used to perform computations on tensors and execute operations in the PyTorch framework. By
-                           default, this parameter is detectd automatically.
+                           default, this parameter is detected automatically.
    -G REF.fasta, --reference-genome REF.fasta
-                           The path to the reference genome.
+                           the path to the reference genome.
    -m MODEL.pt, --model MODEL.pt
-                           the path to the SPLAM! model
+                           the path to the Splam model
 
 |                     
 
@@ -81,15 +89,19 @@ splam clean
 
 .. code-block:: text
 
-   usage: splam clean [-h] [-@ threads] [-t threshold] -o DIR
+   usage: splam clean [-h] [-@ threads] [-t threshold] [-n bad intron num]
+                      [-P] -o DIR
 
    optional arguments:
    -h, --help            show this help message and exit
    -@ threads, --threads threads
-                           Set number of sorting, compression and merging threads. By default, operation is single-threaded.
+                           set the number of sorting, compression, and merging threads; the default is 1
    -t threshold, --threshold threshold
-                           The cutoff threshold for identifying spurious splice junctions.
-   -o DIR, --outdir DIR  the directory where the output file is written to. Default output filename is "junction_score.bed".
+                           cutoff for identifying spurious splice junctions; the default is 0.1
+   -n bad intron num, --bad-intron-num bad intron num
+                           number of spurious introns used to classify a transcript as bad; the default is 8
+   -P, --paired          clean an alignment file in paired-end mode
+   -o DIR, --outdir DIR  required directory containing the extract and score outputs
 
 
 

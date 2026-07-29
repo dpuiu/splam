@@ -42,6 +42,7 @@ src/release/
 TODO
 
 # custom exemptions
+!docs/requirements.txt
 docs/source/content/conclusion.rst
 test/GCF_000001405.40_GRCh38.p14_genomic.fna
 src/splam/helper.py 

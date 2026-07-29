@@ -21,7 +21,7 @@ We extract a 400bp sequence centered around the splice sites, shifting the focus
 Model input & output dimension
 --------------------------------
 
-The input to the model is a 800bp one-hot-encoded DNA sequence in the dimension of :code:`4 x 800`. The output is a :code:`3 x 800` array, with every column representing a base pair, and each row reflecting its probability of being a donor site, acceptor site, or neither (as shown in :numref:`splam-input`). The three scores sum up to 1. For the development of Splam, we used the Pytorch version 1.13.0 framework.
+The input to the model is an 800bp one-hot-encoded DNA sequence in the dimension of :code:`4 x 800`. The output is a :code:`3 x 800` array, with every column representing a base pair, and each row reflecting its probability of being a donor site, acceptor site, or neither (as shown in :numref:`splam-input`). The three scores sum up to 1. For the development of Splam, we used the PyTorch version 1.13.0 framework.
 
 
 .. _splam-input:
@@ -145,7 +145,7 @@ We further improved Splam's performance by changing the loss function. Instead o
     Loss_{FL} = \sum_{class \in \{donor, acceptor, neither\}} I_{class}\times (1-P_{class})^{\gamma} \times \log(P_{class}), \text{where } \gamma = 2
 
 
-Focal loss puts more emphasis on the challenging data points where Splam is more likely to make incorrect predictions and penalized these data points by an additional :math:`(1-P)^{\gamma}`` scale, where :math:`\gamma = 2` and :math:`P` is the probability of each class. This scale quantifies the degree of inaccuracy in predictions, instead of simply binary misclassifications that cross entropy applies.
+Focal loss puts more emphasis on the challenging data points where Splam is more likely to make incorrect predictions and penalized these data points by an additional :math:`(1-P)^{\gamma}` scale, where :math:`\gamma = 2` and :math:`P` is the probability of each class. This scale quantifies the degree of inaccuracy in predictions, instead of simply binary misclassifications that cross entropy applies.
 
 |
 
