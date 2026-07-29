@@ -70,7 +70,7 @@ html_theme = 'furo'
 html_logo = "_static/logo.png"
 html_favicon = "_static/logo.png"
 html_theme_options = {
-    "announcement": "Splam: a deep-learning-based splice site predictor that improves spliced alignments",
+    "announcement": "Splam: deep-learning splice-site prediction",
     "sidebar_hide_name": True,
     "source_repository": "https://github.com/Kuanhao-Chao/splam/",
     "source_branch": "main",
