@@ -3,7 +3,7 @@
 </p>
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/badge/version-v.1.0.10-blue) [![Downloads](https://static.pepy.tech/personalized-badge/splam?period=total&units=abbreviation&left_color=grey&right_color=blue&left_text=PyPi%20downloads)](https://pepy.tech/project/splam) [![GitHub Downloads](https://img.shields.io/github/downloads/Kuanhao-Chao/splam/total.svg?style=social&logo=github&label=Download)](https://github.com/Kuanhao-Chao/splam/releases) ![os](https://img.shields.io/badge/platform-macOS_/Linux-green.svg) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kuanhao-Chao/splam/blob/main/notebook/splam_example.ipynb)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![version](https://img.shields.io/badge/version-v.1.0.12-blue) [![Downloads](https://static.pepy.tech/personalized-badge/splam?period=total&units=abbreviation&left_color=grey&right_color=blue&left_text=PyPi%20downloads)](https://pepy.tech/project/splam) [![GitHub Downloads](https://img.shields.io/github/downloads/Kuanhao-Chao/splam/total.svg?style=social&logo=github&label=Download)](https://github.com/Kuanhao-Chao/splam/releases) ![os](https://img.shields.io/badge/platform-macOS_/Linux-green.svg) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kuanhao-Chao/splam/blob/main/notebook/splam_example.ipynb)
 
 <!-- <a href="https://colab.research.google.com/github/Kuanhao-Chao/splam/blob/main/notebook/splam_example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> -->
 
@@ -26,7 +26,7 @@
 <br>
 
 <figure class="align-center">
-<img alt="https://ccb.jhu.edu/splam/_images/splam_gif.gif" src="https://ccb.jhu.edu/splam/_images/splam_gif.gif">
+<img alt="https://Kuanhao-Chao.github.io/splam/_images/splam_gif.gif" src="https://Kuanhao-Chao.github.io/splam/_images/splam_gif.gif">
 </figure>
 
 
@@ -50,15 +50,15 @@ If you are **(1) doing RNA-Seq data analysis** or **(2) seeking a trustworthy wa
 
 There are two main use case scenarios:
 
-1. Improving your **alignment file**. Splam evaluates the quality of spliced alignments and removes those containing spurious splice junctions. This significantly enhances the quality of downstream transcriptome assemblies [[Link](https://ccb.jhu.edu/splam/content/alignment_evaluation.html#alignment-detailed-section)].
+1. Improving your **alignment file**. Splam evaluates the quality of spliced alignments and removes those containing spurious splice junctions. This significantly enhances the quality of downstream transcriptome assemblies [[Link](https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#alignment-detailed-section)].
 
-2. Evaluating the quality of introns in your **annotation file or assembled transcripts** [[Link](https://ccb.jhu.edu/splam/content/annotation_evaluation.html#annotation-detailed-section)].
+2. Evaluating the quality of introns in your **annotation file or assembled transcripts** [[Link](https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html#annotation-detailed-section)].
 
 <br>
 
 
 ## <a name="documentation"></a>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a>
-📒 The full user manual is available **[here](http://ccb.jhu.edu/splam/)**
+📒 The full user manual is available **[here](https://Kuanhao-Chao.github.io/splam/)**
 
 
 
@@ -70,62 +70,62 @@ There are two main use case scenarios:
 
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html#install-through-pip">Install through pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html#install-from-source">Install from source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html#install-through-conda">Install through conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html#check-splam-installation">Check Splam installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/installation.html#now-you-are-ready-to-go">Now, you are ready to go !</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html#install-through-pip">Install through pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html#install-from-source">Install from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html#install-through-conda">Install through conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html#check-splam-installation">Check Splam installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/installation.html#now-you-are-ready-to-go">Now, you are ready to go !</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/quickstart.html">Quick Start Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/quickstart.html#super-quick-start-3-lines-of-code">Super-Quick Start (3 lines of code)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/quickstart.html#try-splam-on-google-colab">Try Splam on Google Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/quickstart.html">Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/quickstart.html#super-quick-start-3-lines-of-code">Super-Quick Start (3 lines of code)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/quickstart.html#try-splam-on-google-colab">Try Splam on Google Colab</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html">Alignment file evaluation &amp; cleanup (<code class="code docutils literal notranslate"><span class="pre">BAM</span></code>)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#workflow-overview">Workflow overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#step-1-preparing-your-input-files">Step 1: Preparing your input files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#step-2-extracting-splice-junctions-in-your-alignment-file">Step 2: Extracting splice junctions in your alignment file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#step-3-scoring-extracted-splice-junctions">Step 3: Scoring extracted splice junctions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#step-4-cleaning-up-your-alignment-file">Step 4: Cleaning up your alignment file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#step-5-igv-visualization">Step 5: IGV visualization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#step-6-assembling-alignments-into-transcripts">Step 6: Assembling alignments into transcripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/alignment_evaluation.html#what-s-next">What's next?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html">Alignment file evaluation &amp; cleanup (<code class="code docutils literal notranslate"><span class="pre">BAM</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#workflow-overview">Workflow overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#step-1-preparing-your-input-files">Step 1: Preparing your input files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#step-2-extracting-splice-junctions-in-your-alignment-file">Step 2: Extracting splice junctions in your alignment file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#step-3-scoring-extracted-splice-junctions">Step 3: Scoring extracted splice junctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#step-4-cleaning-up-your-alignment-file">Step 4: Cleaning up your alignment file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#step-5-igv-visualization">Step 5: IGV visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#step-6-assembling-alignments-into-transcripts">Step 6: Assembling alignments into transcripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/alignment_evaluation.html#what-s-next">What's next?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/annotation_evaluation.html">Annotation file / assembled transcripts evaluation (<code class="code docutils literal notranslate"><span class="pre">GFF</span></code>)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/annotation_evaluation.html#step-1-preparing-your-input-files">Step 1: Preparing your input files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/annotation_evaluation.html#step-2-extracting-introns-in-your-annotation-file">Step 2: Extracting introns in your annotation file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/annotation_evaluation.html#step-3-scoring-extracted-introns">Step 3: Scoring extracted introns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/annotation_evaluation.html#step-4-evaluating-isoforms-by-splam-scores">Step 4: Evaluating isoforms by Splam scores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/annotation_evaluation.html#what-s-next">What's next?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html">Annotation file / assembled transcripts evaluation (<code class="code docutils literal notranslate"><span class="pre">GFF</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html#step-1-preparing-your-input-files">Step 1: Preparing your input files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html#step-2-extracting-introns-in-your-annotation-file">Step 2: Extracting introns in your annotation file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html#step-3-scoring-extracted-introns">Step 3: Scoring extracted introns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html#step-4-evaluating-isoforms-by-splam-scores">Step 4: Evaluating isoforms by Splam scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/annotation_evaluation.html#what-s-next">What's next?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/generalization.html">Splam generalizes on non-human species</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/generalization.html#example-running-splam-on-house-mouse-mus-musculus">Example: Running Splam on house mouse (<em>Mus musculus</em>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/generalization.html#explanation-splam-s-performance-on-non-human-species">Explanation: Splam's performance on non-human species</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/generalization.html">Splam generalizes on non-human species</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/generalization.html#example-running-splam-on-house-mouse-mus-musculus">Example: Running Splam on house mouse (<em>Mus musculus</em>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/generalization.html#explanation-splam-s-performance-on-non-human-species">Explanation: Splam's performance on non-human species</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/behind_scenes.html">Behind the scenes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/behind_scenes.html#data-curation">Data curation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/behind_scenes.html#model-architecture">Model architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/behind_scenes.html#splam-training-testing">Splam training &amp; testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/behind_scenes.html#reference">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/behind_scenes.html">Behind the scenes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/behind_scenes.html#data-curation">Data curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/behind_scenes.html#model-architecture">Model architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/behind_scenes.html#splam-training-testing">Splam training &amp; testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/behind_scenes.html#reference">Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/how_to_page.html">Q &amp; A ...</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/function_manual.html">User Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/function_manual.html#splam">splam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/function_manual.html#splam-extract">splam extract</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/function_manual.html#splam-score">splam score</a></li>
-<li class="toctree-l2"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/function_manual.html#splam-clean">splam clean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/how_to_page.html">Q &amp; A ...</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/function_manual.html">User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/function_manual.html#splam">splam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/function_manual.html#splam-extract">splam extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/function_manual.html#splam-score">splam score</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/function_manual.html#splam-clean">splam clean</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http://ccb.jhu.edu/splam/content/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://Kuanhao-Chao.github.io/splam/content/contact.html">Contact</a></li>
 </ul>
 </div>
 
