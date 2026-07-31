@@ -173,8 +173,10 @@ Table of contents
    :alt: My Logo
    :class: logo, header-image only-light
    :align: center
+   :target: https://ccb.jhu.edu/
 
 .. image:: ./_images/jhu-logo-white.png
    :alt: My Logo
    :class: logo, header-image only-dark
    :align: center
+   :target: https://ccb.jhu.edu/
